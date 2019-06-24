@@ -33,7 +33,19 @@ https://fonts.google.com/specimen/Roboto?selection.family=Roboto:300,400,500
 https://v0.material-ui.com/#/get-started/usage
 
 -------------------------------------------------------------------------------
--- Урок 3. @TODO: ...
+-- Урок 3. Создание шапки приложения
+
+3.1. Используем компонент "AppBar"
+https://v0.material-ui.com/#/components/app-bar
+
+3.2. Устанавливаем цвет
+https://v0.material-ui.com/#/customization/colors
+
+3.3. Добавляем в "AppBar" меню справа
+https://v0.material-ui.com/#/components/app-bar
+https://v0.material-ui.com/#/components/icon-menu
+https://v0.material-ui.com/#/components/menu - "MenuItem Properties"
+
 -------------------------------------------------------------------------------
 -- Урок 4. @TODO: ...
 -------------------------------------------------------------------------------

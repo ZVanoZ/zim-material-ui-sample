@@ -1,13 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
+import {AppHeader} from './components/header';
 
-import RaisedButton from 'material-ui/RaisedButton';
-
-function App() {
-	return (
-		<div style={{padding: 100}}>
-			<RaisedButton label="default"></RaisedButton>
-		</div>
-	);
+export default class App extends Component{
+	render() {
+		return (
+			<div>
+				<AppHeader/>
+			</div>
+		);
+	}
 }
-
-export default App;
