@@ -1,9 +1,13 @@
 import React from 'react';
 
+import RaisedButton from 'material-ui/RaisedButton';
+
 function App() {
-  return (
-      <div>Working!</div>
-  );
+	return (
+		<div style={{padding: 100}}>
+			<RaisedButton label="default"></RaisedButton>
+		</div>
+	);
 }
 
 export default App;
