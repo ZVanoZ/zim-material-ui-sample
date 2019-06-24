@@ -47,7 +47,18 @@ https://v0.material-ui.com/#/components/icon-menu
 https://v0.material-ui.com/#/components/menu - "MenuItem Properties"
 
 -------------------------------------------------------------------------------
--- Урок 4. @TODO: ...
+-- Урок 4. Создание левого меню
+
+https://v0.material-ui.com/#/components/app-bar
+- 0.19.4 https://v0.material-ui.com/v0.19.4/#/components/app-bar onLeftIconButtonTouchTap
++ 0.20.0 https://v0.material-ui.com/v0.20.0/#/components/app-bar onLeftIconButtonClick
+
+https://v0.material-ui.com/#/components/drawer
+
+Добавили выезжающую слева панель и завязали на клик кнопки левого верхнего угла.
+Использовали сохранение состояния в родительском компоненте, передачу значения
+из состояния в дочерний компонент, передачу callback в дочерний компонент.
+
 -------------------------------------------------------------------------------
 -- Урок 5. @TODO: ...
 -------------------------------------------------------------------------------

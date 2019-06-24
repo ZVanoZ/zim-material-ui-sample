@@ -5,6 +5,11 @@ import {indigo700} from 'material-ui/styles/colors';
 import RightMenu from './header/RightMenu'
 
 export class AppHeader extends Component {
+	// constructor(props) {
+	// 	super(props);
+	// 	//this.props = props;
+	// }
+
 	render() {
 		return (
 			<AppBar
@@ -16,6 +21,10 @@ export class AppHeader extends Component {
 					background: indigo700
 				}}
 				iconElementRight={<RightMenu/>}
+				onLeftIconButtonClick={() => {
+					console.log('AppBar/onLeftIconButtonClick');
+					this.props.onLeftIconButtonClick();
+				}}
 			/>
 		);
 	}
