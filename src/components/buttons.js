@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 
 import RaisedButton from "material-ui/RaisedButton"
-import {blue500, blue700, deepOrange500, red300} from "material-ui/styles/colors";
+import {blue700, deepOrange500, red300} from "material-ui/styles/colors";
 import {FloatingActionButton, FontIcon} from "material-ui";
 
 const styles = {

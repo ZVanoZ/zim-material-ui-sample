@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import MenuItem from 'material-ui/MenuItem';
 import IconMenu from 'material-ui/IconMenu';
 import IconButton from 'material-ui/IconButton';
