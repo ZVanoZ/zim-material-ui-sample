@@ -6,6 +6,10 @@ import {SvgIcon} from "material-ui";
 // Урок5. IconContacts и IconContactMail - это SVG-иконки, данные для отрисовки которых импортируются из "material-ui".
 import IconContacts from "material-ui/svg-icons/communication/contacts"
 import IconContactMail from "material-ui/svg-icons/communication/contact-mail"
+
+// Урок6. Font иконки. Импортируем компонент для использования иконок из шрифтов.
+import FontIcon from "material-ui/FontIcon";
+
 import {blue700, pink700, yellow500} from "material-ui/styles/colors";
 
 // Урок5. HomeIcon - это SVG-иконка, данные для отрисовки которой вшиты в код.
@@ -51,6 +55,25 @@ export class AppDrawer extends Component {
 						/>
 					}
 				>Электронная почта</MenuItem>
+
+				<MenuItem
+					rightIcon={
+						<FontIcon
+							className="material-icons"
+							color={blue700}
+							hoverColor={pink700}
+						>help</FontIcon>
+					}
+				>О нас</MenuItem>
+				<MenuItem
+					rightIcon={
+						<FontIcon
+							className="material-icons"
+							color={blue700}
+							hoverColor={pink700}
+						>settings_phone</FontIcon>
+					}
+				>Позвонить нам</MenuItem>
 			</Drawer>
 		);
 	}
