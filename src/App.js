@@ -3,10 +3,17 @@ import React, {Component} from 'react';
 import {AppHeader} from './components/header';
 import {AppDrawer} from "./components/drawer";
 import {AppButtons} from "./components/buttons";
+import AppList from "./components/list";
 
 export default class App extends Component {
 	state = {
-		isDrawerOpen: false
+		isDrawerOpen: false,
+		itemsList: [
+			{name: 'Элемент 1', description: 'Сложное описание 1', checked: false},
+			{name: 'Элемент 2', description: 'Сложное описание 2', checked: false},
+			{name: 'Элемент 3', description: 'Сложное описание 3', checked: false},
+			{name: 'Элемент 4', description: 'Сложное описание 4', checked: false}
+		]
 	};
 
 	// constructor(props) {
@@ -36,6 +43,9 @@ export default class App extends Component {
 				/>
 				<div className="container">
 					<AppButtons/>
+					<AppList
+						items={this.state.itemsList}
+					/>
 				</div>
 			</div>
 		);
