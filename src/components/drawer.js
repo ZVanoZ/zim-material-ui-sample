@@ -10,7 +10,7 @@ import IconContactMail from "material-ui/svg-icons/communication/contact-mail"
 // Урок6. Font иконки. Импортируем компонент для использования иконок из шрифтов.
 import FontIcon from "material-ui/FontIcon";
 
-import {blue700, pink700, yellow500} from "material-ui/styles/colors";
+import {blue700, pink700} from "material-ui/styles/colors";
 
 // Урок5. HomeIcon - это SVG-иконка, данные для отрисовки которой вшиты в код.
 const HomeIcon = (props) => (
