@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 
 import {AppHeader} from './components/header';
 import {AppDrawer} from "./components/drawer";
+import {AppButtons} from "./components/buttons";
 
 export default class App extends Component {
 	state = {
 		isDrawerOpen: false
-	}
+	};
 
 	// constructor(props) {
 	// 	super(props);
@@ -33,6 +34,9 @@ export default class App extends Component {
 						})
 					}}
 				/>
+				<div className="container">
+					<AppButtons/>
+				</div>
 			</div>
 		);
 	}

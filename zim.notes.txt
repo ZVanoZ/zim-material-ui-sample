@@ -85,7 +85,15 @@ https://v0.material-ui.com/#/components/drawer
 * https://v0.material-ui.com/v0.20.0/#/components/font-icon
 Документация по применению Font-icon
 -------------------------------------------------------------------------------
--- Урок 7. @TODO: ...
+-- Урок 7. Кнопки.
+
+* https://v0.material-ui.com/v0.20.0/#/components/raised-button
+"Raised Button" - рельефные кнопки
+* https://v0.material-ui.com/v0.20.0/#/components/floating-action-button
+"Floating Action Button" - кнопка в виде кружка
+* https://v0.material-ui.com/v0.20.0/#/customization/themes
+Темы "material-ui". Подключаем "lightBaseTheme".
+
 -------------------------------------------------------------------------------
 -- Урок 8. @TODO: ...
 -------------------------------------------------------------------------------
