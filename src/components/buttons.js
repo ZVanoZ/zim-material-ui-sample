@@ -71,6 +71,7 @@ export class AppButtons extends Component {
 					style={styles}
 					onClick={() => {
 						console.log('click/Delete');
+						this.props.onDelete();
 					}}
 					backgroundColor={red300}
 					labelColor={yellow700}

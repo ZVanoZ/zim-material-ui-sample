@@ -11,7 +11,7 @@ export default class App extends Component {
 		itemsList: [
 			{name: 'Элемент 1', description: 'Сложное описание 1', checked: false},
 			{name: 'Элемент 2', description: 'Сложное описание 2', checked: false},
-			{name: 'Элемент 3', description: 'Сложное описание 3', checked: false},
+			{name: 'Элемент 3', description: 'Сложное описание 3', checked: true},
 			{name: 'Элемент 4', description: 'Сложное описание 4', checked: false}
 		]
 	};
@@ -48,6 +48,14 @@ export default class App extends Component {
 						}).filter((i) => {
 							return i;
 						})}
+						onDelete={()=>{
+							let items = this.state.itemsList.filter((item)=>{
+								return !item.checked;
+							});
+							this.setState({
+								itemsList : items
+							})
+						}}
 					/>
 					<AppList
 						items={this.state.itemsList}
