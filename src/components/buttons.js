@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 
 import RaisedButton from "material-ui/RaisedButton"
-import {blue500, blue700, deepOrange500, red300} from "material-ui/styles/colors";
+import {blue700, deepOrange500, red300, yellow700} from "material-ui/styles/colors";
 import {FloatingActionButton, FontIcon} from "material-ui";
 
 const styles = {
@@ -65,6 +65,17 @@ export class AppButtons extends Component {
 				>
 					<div>google2</div>
 				</FloatingActionButton>
+				<hr/>
+				<RaisedButton
+					label="Удалить выбранные элементы"
+					style={styles}
+					onClick={() => {
+						console.log('click/Delete');
+					}}
+					backgroundColor={red300}
+					labelColor={yellow700}
+					disabled={this.props.itemsChecked.length < 1 ? true : false}
+				/>
 			</div>
 		);
 	}

@@ -42,9 +42,22 @@ export default class App extends Component {
 					}}
 				/>
 				<div className="container">
-					<AppButtons/>
+					<AppButtons
+						itemsChecked={this.state.itemsList.map((item) => {
+							return item.checked;
+						}).filter((i) => {
+							return i;
+						})}
+					/>
 					<AppList
 						items={this.state.itemsList}
+						onCheck={(checked, index) => {
+							let {itemsList} = this.state;
+							itemsList[index].checked = checked;
+							this.setState({
+								itemsList: itemsList
+							});
+						}}
 					/>
 				</div>
 			</div>
