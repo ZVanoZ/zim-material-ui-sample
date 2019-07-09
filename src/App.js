@@ -5,6 +5,7 @@ import {AppDrawer} from "./components/drawer";
 import {AppButtons} from "./components/buttons";
 import AppList from "./components/list";
 import Popover from "material-ui/Popover";
+import {AppForm} from "./components/form";
 
 export default class App extends Component {
 	state = {
@@ -86,7 +87,7 @@ export default class App extends Component {
 							});
 						}}
 					>
-						<h1>Popover</h1>
+						<AppForm></AppForm>
 					</Popover>
 					<hr/>
 					<AppList
