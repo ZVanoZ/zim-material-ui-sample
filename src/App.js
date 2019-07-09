@@ -20,6 +20,16 @@ export default class App extends Component {
 		]
 	};
 
+	onAdd(item) {
+		console.log('App/onAdd');
+		let itemsList = this.state.itemsList;
+		itemsList.push(item);
+		this.setState({
+			itemsList: itemsList,
+			isPopoverOpen : false
+		});
+	}
+
 	// constructor(props) {
 	// 	super(props);
 	// 	this.state = {
@@ -68,8 +78,6 @@ export default class App extends Component {
 							});
 						}}
 					/>
-					<hr/>
-					<div>Popover test</div>
 					<Popover
 						open={this.state.isPopoverOpen}
 						anchorEl={this.state.popoverElement}
@@ -83,13 +91,17 @@ export default class App extends Component {
 							// console.log('Popover/onRequestClose');
 							this.setState({
 								isPopoverOpen: false,
-								popoverElement : null
+								popoverElement: null
 							});
 						}}
 					>
-						<AppForm></AppForm>
+						<AppForm
+							onAdd={(data) => {
+								console.log('AppForm/onAdd');
+								this.onAdd(data);
+							}}
+						/>
 					</Popover>
-					<hr/>
 					<AppList
 						items={this.state.itemsList}
 						onCheck={(checked, index) => {
@@ -104,4 +116,5 @@ export default class App extends Component {
 			</div>
 		);
 	}
+
 }
