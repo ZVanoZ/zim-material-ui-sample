@@ -4,10 +4,13 @@ import {AppHeader} from './components/header';
 import {AppDrawer} from "./components/drawer";
 import {AppButtons} from "./components/buttons";
 import AppList from "./components/list";
+import Popover from "material-ui/Popover";
 
 export default class App extends Component {
 	state = {
 		isDrawerOpen: false,
+		isPopoverOpen: false,
+		popoverElement: null,
 		itemsList: [
 			{name: 'Элемент 1', description: 'Сложное описание 1', checked: false},
 			{name: 'Элемент 2', description: 'Сложное описание 2', checked: false},
@@ -48,15 +51,44 @@ export default class App extends Component {
 						}).filter((i) => {
 							return i;
 						})}
-						onDelete={()=>{
-							let items = this.state.itemsList.filter((item)=>{
+						onDelete={() => {
+							let items = this.state.itemsList.filter((item) => {
 								return !item.checked;
 							});
 							this.setState({
-								itemsList : items
+								itemsList: items
 							})
 						}}
+						onAdd={(popoverElement) => {
+							// console.log('AppButtons/onAdd');
+							this.setState({
+								popoverElement: popoverElement,
+								isPopoverOpen: true
+							});
+						}}
 					/>
+					<hr/>
+					<div>Popover test</div>
+					<Popover
+						open={this.state.isPopoverOpen}
+						anchorEl={this.state.popoverElement}
+						anchorOrigin={{horizontal: 'left', vertical: 'bottom'}}
+						targetOrigin={{horizontal: 'left', vertical: 'top'}}
+						style={{
+							width: 300,
+							padding: '15px 30px'
+						}}
+						onRequestClose={() => {
+							// console.log('Popover/onRequestClose');
+							this.setState({
+								isPopoverOpen: false,
+								popoverElement : null
+							});
+						}}
+					>
+						<h1>Popover</h1>
+					</Popover>
+					<hr/>
 					<AppList
 						items={this.state.itemsList}
 						onCheck={(checked, index) => {

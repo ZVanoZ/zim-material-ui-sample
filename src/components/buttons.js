@@ -1,8 +1,9 @@
 import React, {Component} from "react";
 
 import RaisedButton from "material-ui/RaisedButton"
-import {blue700, deepOrange500, red300, yellow700} from "material-ui/styles/colors";
-import {FloatingActionButton, FontIcon} from "material-ui";
+import FontIcon from "material-ui/FontIcon";
+import FloatingActionButton from "material-ui/FloatingActionButton";
+import {blue700, deepOrange500, green700, lightGreen300, red300, yellow700} from "material-ui/styles/colors";
 
 const styles = {
 	marginRight: 20
@@ -67,10 +68,20 @@ export class AppButtons extends Component {
 				</FloatingActionButton>
 				<hr/>
 				<RaisedButton
+					label="Добавить элемент"
+					style={styles}
+					onClick={(event) => {
+						//console.log('click/Add');
+						this.props.onAdd(event.currentTarget);
+					}}
+					backgroundColor={lightGreen300}
+					labelColor={green700}
+				/>
+				<RaisedButton
 					label="Удалить выбранные элементы"
 					style={styles}
 					onClick={() => {
-						console.log('click/Delete');
+						// console.log('click/Delete');
 						this.props.onDelete();
 					}}
 					backgroundColor={red300}
