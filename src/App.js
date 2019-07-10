@@ -9,12 +9,14 @@ import {AppForm} from "./components/form";
 import Dialog from "material-ui/Dialog";
 import RaisedButton from "material-ui/RaisedButton";
 import DatePicker from "material-ui/DatePicker";
+import Snackbar from "material-ui/Snackbar";
 
 export default class App extends Component {
 	state = {
 		isDrawerOpen: false,
 		isPopoverOpen: false,
 		isModalOpen: false,
+		isSnackbarOpen: false,
 		selectedDate: new Date(),
 		popoverElement: null,
 		itemsList: [
@@ -160,11 +162,30 @@ export default class App extends Component {
 						onChange={(nothing, selectedDate) => {
 							console.log('App/Dialog/DatePicker/onChange', nothing, selectedDate);
 							this.setState({
-								selectedDate: selectedDate
+								selectedDate: selectedDate,
+								isSnackbarOpen : true
 							});
 						}}
 					/>
 				</Dialog>
+				<Snackbar
+					open={this.state.isSnackbarOpen}
+					message={'' + this.state.selectedDate}
+					action='Отмена'
+					autoHideDuration={2000}
+					onActionClick={() => {
+						console.log('App/Snackbar/onActionClick');
+						this.setState({
+							isSnackbarOpen: false
+						});
+					}}
+					onRequestClose={() => {
+						console.log('App/Snackbar/onRequestClose');
+						this.setState({
+							isSnackbarOpen: false
+						});
+					}}
+				/>
 			</div>
 		);
 	}
