@@ -152,7 +152,17 @@ https://v0.material-ui.com/#/components/drawer
 Компонент "TextField" - валидация при нажатии на кнопку "Добавить".
 
 -------------------------------------------------------------------------------
--- Урок 14. @TODO: ...
+-- Урок 14. Модальное окно.
+
+Выводим простое модальное окно при нажатии на кнопку "Модалка".
+Состояние isModalOpen храним в App и меняем по нажатию на кнопку "Окей!" в модалке.
+
+* https://v0.material-ui.com/#/components/dialog
+Компонент "Dialog".
+* https://v0.material-ui.com/#/components/raised-button
+Компонент "RaisedButton".
+* https://v0.material-ui.com/#/components/floating-action-button
+Компонент "FloatingActionButton".
 
 -------------------------------------------------------------------------------
 -- Урок 15. @TODO: ...

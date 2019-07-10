@@ -55,16 +55,19 @@ export class AppButtons extends Component {
 					icon={<FontIcon className="material-icons">search</FontIcon>}
 				/>
 				<FloatingActionButton
-					href="https://google.com"
-					target="_blank"
+					//href="https://google.com"
+					//target="_blank"
 					backgroundColor={deepOrange500}
 					style={{
 						position: 'fixed',
 						right: "10%",
 						bottom: "10%"
 					}}
+					onClick={()=>{
+						this.props.openModal();
+					}}
 				>
-					<div>google2</div>
+					<div>Модалка</div>
 				</FloatingActionButton>
 				<hr/>
 				<RaisedButton

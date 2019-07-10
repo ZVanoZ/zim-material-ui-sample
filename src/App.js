@@ -6,11 +6,14 @@ import {AppButtons} from "./components/buttons";
 import AppList from "./components/list";
 import Popover from "material-ui/Popover";
 import {AppForm} from "./components/form";
+import Dialog from "material-ui/Dialog";
+import RaisedButton from "material-ui/RaisedButton";
 
 export default class App extends Component {
 	state = {
 		isDrawerOpen: false,
 		isPopoverOpen: false,
+		isModalOpen: false,
 		popoverElement: null,
 		itemsList: [
 			{name: 'Элемент 1', description: 'Сложное описание 1', checked: false},
@@ -26,7 +29,7 @@ export default class App extends Component {
 		itemsList.push(item);
 		this.setState({
 			itemsList: itemsList,
-			isPopoverOpen : false
+			isPopoverOpen: false
 		});
 	}
 
@@ -77,6 +80,11 @@ export default class App extends Component {
 								isPopoverOpen: true
 							});
 						}}
+						openModal={() => {
+							this.setState({
+								isModalOpen: true
+							});
+						}}
 					/>
 					<Popover
 						open={this.state.isPopoverOpen}
@@ -113,6 +121,31 @@ export default class App extends Component {
 						}}
 					/>
 				</div>
+				<Dialog
+					actions={[
+						<RaisedButton
+							label='Окей!'
+							primary={true}
+							onClick={()=>{
+								console.log('App/Dialog/buttonClose/click');
+								this.setState({
+									isModalOpen: false
+								});
+							}}
+						/>
+					]}
+					title='Выберите дату!'
+					modal={false}
+					open={this.state.isModalOpen}
+					onRequestClose={() => {
+						console.log('App/Dialog/onRequestClose');
+						this.setState({
+							isModalOpen: false
+						});
+					}}
+				>
+					Я крутое модальное окно!
+				</Dialog>
 			</div>
 		);
 	}
