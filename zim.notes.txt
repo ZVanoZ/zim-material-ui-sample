@@ -165,7 +165,16 @@ https://v0.material-ui.com/#/components/drawer
 Компонент "FloatingActionButton".
 
 -------------------------------------------------------------------------------
--- Урок 15. @TODO: ...
+-- Урок 15. Плагин выбора даты.
+
+* https://v0.material-ui.com/#/components/date-picker
+Компонент "DatePicker".
+* Intl.DateTimeFormat
+** https://learn.javascript.ru/intl
+Intl: интернационализация в JavaScript
+** https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat
+Объект Intl.DateTimeFormat является конструктором объектов, включающих языко-зависимое форматирование даты и времени.
+
 
 -------------------------------------------------------------------------------
 -- Урок 16. @TODO: ...

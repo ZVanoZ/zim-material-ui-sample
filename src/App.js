@@ -8,12 +8,14 @@ import Popover from "material-ui/Popover";
 import {AppForm} from "./components/form";
 import Dialog from "material-ui/Dialog";
 import RaisedButton from "material-ui/RaisedButton";
+import DatePicker from "material-ui/DatePicker";
 
 export default class App extends Component {
 	state = {
 		isDrawerOpen: false,
 		isPopoverOpen: false,
 		isModalOpen: false,
+		selectedDate: new Date(),
 		popoverElement: null,
 		itemsList: [
 			{name: 'Элемент 1', description: 'Сложное описание 1', checked: false},
@@ -126,7 +128,7 @@ export default class App extends Component {
 						<RaisedButton
 							label='Окей!'
 							primary={true}
-							onClick={()=>{
+							onClick={() => {
 								console.log('App/Dialog/buttonClose/click');
 								this.setState({
 									isModalOpen: false
@@ -144,10 +146,26 @@ export default class App extends Component {
 						});
 					}}
 				>
-					Я крутое модальное окно!
+					<div>Я крутое модальное окно!</div>
+					<DatePicker
+						hintText='Выберите дату'
+						defaultDate={this.state.selectedDate}
+						//value={this.state.selectedDate}
+						formatDate={new window.Intl.DateTimeFormat('ru-RU', {
+							day: 'numeric',
+							month: 'long',
+							year: 'numeric'
+						}).format}
+						mode='landscape'
+						onChange={(nothing, selectedDate) => {
+							console.log('App/Dialog/DatePicker/onChange', nothing, selectedDate);
+							this.setState({
+								selectedDate: selectedDate
+							});
+						}}
+					/>
 				</Dialog>
 			</div>
 		);
 	}
-
 }
