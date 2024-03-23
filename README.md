@@ -1,5 +1,21 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Notes about legacy
+
+This project does not work with modern versions of NodeJs (v21).  
+Use NVM for run.
+````bash
+nvm install 11 
+nvm use 11
+npm install
+
+# Now we can build app into folder "./build"
+npm run build
+
+# Or run app. Go to URL http://localhost:3000/  
+npm run start
+````
+
 ## Available Scripts
 
 In the project directory, you can run:
